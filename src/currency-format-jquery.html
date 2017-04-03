@@ -1,0 +1,31 @@
+<html lang="en">
+
+<script>
+    $(document).ready(function () {
+        alert("entrou");
+        $(".total").maskMoney();
+
+        $("form").on("keyup", ".qtd", function () {
+            alert("entrou aqui");
+            var valor = 1111;
+            var calcular = valor * $(".qtd").val();
+            $(".total").val(calcular).focus();
+            $(".qtd").focus();
+        });
+
+
+    });
+
+</script>
+
+<body>
+
+    <form>
+        <input type="text" name="QTD" id="qtd" class="qtd" />
+        <input type="text" id="total" class="total" name="TOTAL" />
+    </form>
+
+</body>
+
+
+</html>
